@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
   res.send('server del mio blog');
 });
 
-app.get('/posts', (req, res) => {
+app.get('/bacheca', (req, res) => {
+    
     const infoBlog = [
             {
                 titolo: 'Ciambellone',
@@ -21,31 +22,34 @@ app.get('/posts', (req, res) => {
             {
                 titolo: 'Cracker di barbabietola',
                 contenuto: 'croccante e delizioso',
-                immagine:"public/images/cracker_barbabietola.jpg",
+                immagine:"images/cracker_barbabietola.jpg",
                 tags:["salato","croccante"]
             }, 
             {
                 titolo: 'Pane fritto dolce',
                 contenuto: 'fritto e accativante',
-                immagine:"ipublic/images/pane_fritto_dolce.jpg",
+                immagine:"iimages/pane_fritto_dolce.jpg",
                 tags:["dolce","sfizioso","ipercalorico"]
             }, 
             {
                 titolo: 'pasta alla barbabietola',
                 contenuto: 'carboidrati sfiziosi',
-                immagine:"public/images/pasta_barbabietola.jpg",
+                immagine:"images/pasta_barbabietola.jpg",
                 tags:["salato","sfizioso","colorato"]
             }, 
             {
                 titolo: 'Torta Paesana',
                 contenuto: 'da nonna a nipote',
-                immagine:"public/images/torta_paesana.jpg",
+                immagine:"images/torta_paesana.jpg",
                 tags:["dolce","sfizioso","tradizionae"]
             }]
-
+            console.log(infoBlog)
             res.json(infoBlog)
 
     })
+//  app.get('/bacheca', (req, res) => {
+//     res.json(infoBlog)
+//  });
 
 
     // creo una rotta che restituisce un oggetto json con la lista dei post
